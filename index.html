@@ -15,9 +15,9 @@
       --teal-light: #0d6080;
       --teal-pale: #e8f4f9;
       --white: #ffffff;
-      --off-white: #f7f9fb;
+      --off-white: #eef1f4;
       --text: #1a1a1a;
-      --text-muted: #6b7280;
+      --text-muted: #4b5563;
       --border: #e5eaee;
       --radius: 12px;
       --radius-lg: 20px;
@@ -71,11 +71,25 @@
     }
     nav.scrolled { box-shadow: 0 2px 20px rgba(10,74,99,0.08); }
 
-    .nav-logo svg { height: 40px; width: auto; }
+    .nav-logo svg { height: 28px; width: auto; }
+    .logo-badge svg path:not(.cls-1) { fill: white !important; }
+    .logo-badge {
+      background: #1a1a1a;
+      border-radius: 12px;
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .nav-logo:hover .logo-badge { background: var(--teal); }
     .nav-logo path:not(.cls-1) { fill: var(--teal); }
+    .logo-badge path:not(.cls-1) { fill: white !important; }
 
     .nav-links {
       display: flex;
+      align-items: center;
       gap: 36px;
       list-style: none;
     }
@@ -92,11 +106,19 @@
     .nav-cta {
       background: var(--teal);
       color: var(--white) !important;
-      padding: 8px 18px;
-      border-radius: 100px;
+      padding: 0 20px;
+      height: 38px;
+      border-radius: 100px !important;
+      font-family: 'Inter', sans-serif !important;
+      font-size: 13px !important;
       font-weight: 500 !important;
+      letter-spacing: 0.01em;
       border: 1.5px solid var(--teal);
       transition: background 0.25s ease, color 0.25s ease !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      box-sizing: border-box !important;
     }
     .nav-cta:hover { background: transparent !important; color: var(--teal) !important; }
 
@@ -200,28 +222,39 @@
     .btn-primary, button.btn-primary {
       background: var(--teal);
       color: var(--white);
-      padding: 11px 26px;
+      padding: 0 24px;
+      height: 38px;
       border-radius: 100px;
-      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
       font-weight: 500;
       text-decoration: none;
       border: 1.5px solid var(--teal);
       transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      cursor: pointer;
     }
     .btn-primary:hover { background: transparent; color: var(--teal); transform: translateY(-2px); }
 
     .btn-outline {
       background: transparent;
       color: var(--teal);
-      padding: 11px 26px;
+      padding: 0 24px;
+      height: 38px;
       border-radius: 100px;
-      font-size: 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
       font-weight: 500;
       text-decoration: none;
       border: 1.5px solid var(--teal);
       transition: background 0.25s ease, color 0.25s ease, transform 0.2s ease;
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
     }
     .btn-outline:hover { background: var(--teal); color: var(--white); transform: translateY(-2px); }
 
@@ -291,14 +324,17 @@
 
     .about-image-wrap {
       position: relative;
+      padding: 20px;
     }
 
     .about-image-placeholder {
-      width: 85%;
+      width: 72%;
       aspect-ratio: 4/5;
       border-radius: var(--radius-lg);
       position: relative;
       overflow: hidden;
+      margin: 20px auto;
+      padding: 20px;
     }
 
     .about-image-placeholder::before {
@@ -644,6 +680,7 @@
       width: 40px; height: 40px;
       background: var(--teal-pale);
       border-radius: 10px;
+      border: 1px solid rgba(10,74,99,0.15);
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
     }
@@ -836,13 +873,15 @@
   <nav id="navbar">
     <div class="nav-left">
     <a href="#hero" class="nav-logo">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 56.75">
-        <defs><style>.cls-1{fill:none;}</style></defs>
-        <g><g id="Layer_1"><g id="Layer_1-2"><g>
-          <path class="cls-1" d="M60.23,13.22c-.93-.81-2.14-1.44-3.64-1.91s-3.34-.7-5.52-.7h-7.16v16.82h7.37c1.98,0,3.69-.19,5.16-.56,1.46-.38,2.66-.91,3.61-1.59.95-.68,1.65-1.5,2.11-2.46.46-.96.69-2.01.69-3.15,0-1.29-.2-2.48-.61-3.58s-1.07-2.05-2-2.86h0Z"/>
-          <path d="M70.91,33.96c-.45-1.13-1.09-2.12-1.91-2.97s-1.82-1.54-2.98-2.09-2.47-.94-3.92-1.16v-.12c1.45-.69,2.65-1.37,3.59-2.03s1.71-1.37,2.28-2.11c.57-.74.97-1.56,1.19-2.43.23-.88.34-1.88.34-3,0-1.47-.36-2.81-1.07-4.04-.71-1.22-1.72-2.27-3.01-3.15s-2.85-1.56-4.65-2.03-3.79-.72-5.95-.72h-16.33v37.93h-20.24V8.1h-6.82v40.55h45.99c2.16,0,4.11-.28,5.86-.86,1.75-.57,3.23-1.35,4.47-2.34s2.18-2.15,2.85-3.49c.66-1.33.99-2.77.99-4.3,0-1.34-.23-2.58-.67-3.72h0ZM45.31,10.79h5.63c2.04,0,3.79.18,5.25.55s2.66.9,3.61,1.59c.95.69,1.65,1.52,2.09,2.49s.67,2.04.67,3.23c0,1.1-.19,2.12-.56,3.07s-.93,1.76-1.67,2.45c-.73.68-1.63,1.22-2.69,1.61-1.06.39-2.27.58-3.64.58h-8.69v-15.58h0ZM63.55,41.07c-.46.96-1.16,1.78-2.11,2.46-.95.68-2.15,1.21-3.61,1.59-1.46.38-3.18.56-5.16.56h-7.37v-16.82h7.16c2.18,0,4.02.23,5.52.7s2.71,1.11,3.64,1.91,1.6,1.76,2,2.86.61,2.3.61,3.58c0,1.14-.23,2.19-.69,3.15h0Z"/>
-        </g></g></g></g>
-      </svg>
+      <div class="logo-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 56.75">
+          <defs><style>.cls-1{fill:none;}</style></defs>
+          <g><g id="Layer_1"><g id="Layer_1-2"><g>
+            <path class="cls-1" d="M60.23,13.22c-.93-.81-2.14-1.44-3.64-1.91s-3.34-.7-5.52-.7h-7.16v16.82h7.37c1.98,0,3.69-.19,5.16-.56,1.46-.38,2.66-.91,3.61-1.59.95-.68,1.65-1.5,2.11-2.46.46-.96.69-2.01.69-3.15,0-1.29-.2-2.48-.61-3.58s-1.07-2.05-2-2.86h0Z"/>
+            <path fill="white" d="M70.91,33.96c-.45-1.13-1.09-2.12-1.91-2.97s-1.82-1.54-2.98-2.09-2.47-.94-3.92-1.16v-.12c1.45-.69,2.65-1.37,3.59-2.03s1.71-1.37,2.28-2.11c.57-.74.97-1.56,1.19-2.43.23-.88.34-1.88.34-3,0-1.47-.36-2.81-1.07-4.04-.71-1.22-1.72-2.27-3.01-3.15s-2.85-1.56-4.65-2.03-3.79-.72-5.95-.72h-16.33v37.93h-20.24V8.1h-6.82v40.55h45.99c2.16,0,4.11-.28,5.86-.86,1.75-.57,3.23-1.35,4.47-2.34s2.18-2.15,2.85-3.49c.66-1.33.99-2.77.99-4.3,0-1.34-.23-2.58-.67-3.72h0ZM45.31,10.79h5.63c2.04,0,3.79.18,5.25.55s2.66.9,3.61,1.59c.95.69,1.65,1.52,2.09,2.49s.67,2.04.67,3.23c0,1.1-.19,2.12-.56,3.07s-.93,1.76-1.67,2.45c-.73.68-1.63,1.22-2.69,1.61-1.06.39-2.27.58-3.64.58h-8.69v-15.58h0ZM63.55,41.07c-.46.96-1.16,1.78-2.11,2.46-.95.68-2.15,1.21-3.61,1.59-1.46.38-3.18.56-5.16.56h-7.37v-16.82h7.16c2.18,0,4.02.23,5.52.7s2.71,1.11,3.64,1.91,1.6,1.76,2,2.86.61,2.3.61,3.58c0,1.14-.23,2.19-.69,3.15h0Z"/>
+          </g></g></g></g>
+        </svg>
+      </div>
     </a>
     <div class="nav-social">
       <a href="https://linkedin.com/in/latoyabowman" target="_blank" title="LinkedIn" class="nav-icon">
@@ -1003,8 +1042,8 @@
         </div>
         <div class="filter-tabs reveal" id="filterTabs">
           <button class="filter-tab active" data-filter="all">All</button>
-          <button class="filter-tab" data-filter="xula">XULA</button>
           <button class="filter-tab" data-filter="lonestar">LoneStar</button>
+          <button class="filter-tab" data-filter="xula">XULA</button>
         </div>
       </div>
 
@@ -1022,46 +1061,6 @@
 
 
 
-
-        <div class="project-card" data-category="xula" onclick="openModal('xu1')">
-          <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#0a4a63,#0d8fb3);aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);font-size:13px;font-weight:500;">Add project image</div>
-          <div class="project-info">
-            <p class="project-category">XULA</p>
-            <h3>Project Title</h3>
-            <p>Upload your project image and add a description here.</p>
-            <span class="project-arrow">View Case Study &#x2192;</span>
-          </div>
-        </div>
-
-        <div class="project-card" data-category="xula" onclick="openModal('xu2')">
-          <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#1a4a63,#1a7a9a);aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);font-size:13px;font-weight:500;">Add project image</div>
-          <div class="project-info">
-            <p class="project-category">XULA</p>
-            <h3>Project Title</h3>
-            <p>Upload your project image and add a description here.</p>
-            <span class="project-arrow">View Case Study &#x2192;</span>
-          </div>
-        </div>
-
-        <div class="project-card" data-category="xula" onclick="openModal('xu3')">
-          <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#0a3a4a,#0a6a80);aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);font-size:13px;font-weight:500;">Add project image</div>
-          <div class="project-info">
-            <p class="project-category">XULA</p>
-            <h3>Project Title</h3>
-            <p>Upload your project image and add a description here.</p>
-            <span class="project-arrow">View Case Study &#x2192;</span>
-          </div>
-        </div>
-
-        <div class="project-card" data-category="xula" onclick="openModal('xu4')">
-          <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#0a4a50,#0a8a90);aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);font-size:13px;font-weight:500;">Add project image</div>
-          <div class="project-info">
-            <p class="project-category">XULA</p>
-            <h3>Project Title</h3>
-            <p>Upload your project image and add a description here.</p>
-            <span class="project-arrow">View Case Study &#x2192;</span>
-          </div>
-        </div>
 
         <div class="project-card" data-category="lonestar" onclick="openModal('ls1')">
           <img class="project-thumb" src="Bookstore-LB.webp" alt="Lone Star College Bookstore redesign" />
@@ -1099,6 +1098,36 @@
             <p class="project-category">LoneStar College</p>
             <h3>Career Services</h3>
             <p>Redesigned the LSC-Houston North Career Services page to highlight offerings with icon-led service cards and a prominent counsellor introduction.</p>
+            <span class="project-arrow">View Case Study &#x2192;</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="xula" onclick="openModal('xu1')">
+          <img class="project-thumb" src="xula-homecoming.png" alt="XULA Homecoming App" />
+          <div class="project-info">
+            <p class="project-category">XULA — Mobile</p>
+            <h3>Homecoming App</h3>
+            <p>A guest-facing mobile app for Xavier University's Homecoming 2018, enabling event registration, check-in, schedules, and campus navigation.</p>
+            <span class="project-arrow">View Case Study &#x2192;</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="xula" onclick="openModal('xu2')">
+          <img class="project-thumb" src="xula-covid.png" alt="XULA COVID Health Assessment App" />
+          <div class="project-info">
+            <p class="project-category">XULA — Mobile</p>
+            <h3>XULAgo — Campus Health App</h3>
+            <p>A COVID-19 health assessment and campus access app that helped Xavier University safely manage on-campus entry during the pandemic.</p>
+            <span class="project-arrow">View Case Study &#x2192;</span>
+          </div>
+        </div>
+
+        <div class="project-card" data-category="xula" onclick="openModal('xu3')">
+          <img class="project-thumb" src="xula-myxula.png" alt="myXULA Portal App" />
+          <div class="project-info">
+            <p class="project-category">XULA — Portal</p>
+            <h3>myXULA — Unified Portal</h3>
+            <p>Combined a clunky legacy portal and separate mobile app into one streamlined platform, giving students a single hub for academics, events, and campus resources.</p>
             <span class="project-arrow">View Case Study &#x2192;</span>
           </div>
         </div>
@@ -1183,39 +1212,39 @@
           </div>
         </div>
         <div class="reveal">
-          <div class="contact-form">
+          <form class="contact-form" action="https://formspree.io/f/xvznlnke" method="POST">
             <div class="form-row">
               <div class="form-group">
                 <label>First Name</label>
-                <input type="text" placeholder="Jane" />
+                <input type="text" name="first_name" placeholder="Jane" />
               </div>
               <div class="form-group">
                 <label>Last Name</label>
-                <input type="text" placeholder="Smith" />
+                <input type="text" name="last_name" placeholder="Smith" />
               </div>
             </div>
             <div class="form-group">
               <label>Email</label>
-              <input type="email" placeholder="jane@example.com" />
+              <input type="email" name="email" placeholder="jane@example.com" />
             </div>
             <div class="form-group">
               <label>Project Type</label>
-              <select>
+              <select name="project_type">
                 <option value="">Select a service</option>
-                <option>Web Design</option>
-                <option>Web Development</option>
-                <option>eCommerce</option>
-                <option>Branding</option>
-                <option>Mobile App</option>
-                <option>Other</option>
+                <option value="Web Design">Web Design</option>
+                <option value="Web Development">Web Development</option>
+                <option value="eCommerce">eCommerce</option>
+                <option value="Branding">Branding</option>
+                <option value="Mobile App">Mobile App</option>
+                <option value="Other">Other</option>
               </select>
             </div>
             <div class="form-group">
               <label>Message</label>
-              <textarea placeholder="Tell me about your project…"></textarea>
+              <textarea name="message" placeholder="Tell me about your project…"></textarea>
             </div>
-            <button class="btn-primary" style="border:1.5px solid var(--teal);cursor:pointer;font-size:15px;">Send Message</button>
-          </div>
+            <button type="submit" class="btn-primary" style="border:1.5px solid var(--teal);cursor:pointer;font-size:13px;width:auto;align-self:flex-start;">Send Message</button>
+          </form>
         </div>
       </div>
     </div>
@@ -1303,36 +1332,33 @@
     // ── CASE STUDY DATA ──
     const projects = {
       xu1: {
-        category: 'XULA',
-        title: 'Project Title',
-        body: `<p>Add your case study content here. Describe the project brief, the challenges you faced, and the solutions you delivered at Xavier University of Louisiana.</p><p>Walk through your process and share the outcome.</p>`,
-        tags: ['XULA', 'Web Design', 'Mobile'],
+        category: 'XULA — Mobile',
+        title: 'Homecoming App',
+        src: 'xula-homecoming.png',
+        body: `<p>Xavier University of Louisiana needed a dedicated mobile experience for Homecoming 2018 that would serve both returning alumni and on-campus guests throughout the multi-day event.</p><p>The app provided event registration and check-in, a full homecoming schedule, parade route, campus map, and a live social feed — all under the "eXcellence &amp; yoU" theme. A tile-based navigation system made key actions immediately accessible on first launch.</p><p>The result was a seamless, branded event experience that kept thousands of attendees informed and engaged across the week-long celebration.</p>`,
+        tags: ['Mobile App', 'UX Design', 'Event Management', 'XULA'],
         images: 1
       },
       xu2: {
-        category: 'XULA',
-        title: 'Project Title',
-        body: `<p>Add your case study content here. Describe the project brief, the challenges you faced, and the solutions you delivered at Xavier University of Louisiana.</p><p>Walk through your process and share the outcome.</p>`,
-        tags: ['XULA', 'Web Design', 'Mobile'],
+        category: 'XULA — Mobile',
+        title: 'XULAgo — Campus Health App',
+        src: 'xula-covid.png',
+        body: `<p>When the COVID-19 pandemic forced universities to rethink campus access, Xavier University needed a fast, reliable solution to screen students, faculty, and staff before they entered campus.</p><p>XULAgo was developed to deliver a daily health self-assessment and generate a digital health pass directly on the user's phone. The app also surfaced C-19 resources, active case counts, and campus safety information in one place.</p><p>This project was a critical part of XULA's safe return-to-campus strategy and helped the university maintain operations while prioritising community health during an unprecedented crisis.</p>`,
+        tags: ['Mobile App', 'COVID-19', 'Campus Safety', 'UX Design', 'XULA'],
         images: 1
       },
       xu3: {
-        category: 'XULA',
-        title: 'Project Title',
-        body: `<p>Add your case study content here. Describe the project brief, the challenges you faced, and the solutions you delivered at Xavier University of Louisiana.</p><p>Walk through your process and share the outcome.</p>`,
-        tags: ['XULA', 'Web Design', 'Mobile'],
-        images: 1
-      },
-      xu4: {
-        category: 'XULA',
-        title: 'Project Title',
-        body: `<p>Add your case study content here. Describe the project brief, the challenges you faced, and the solutions you delivered at Xavier University of Louisiana.</p><p>Walk through your process and share the outcome.</p>`,
-        tags: ['XULA', 'Web Design', 'Mobile'],
+        category: 'XULA — Portal',
+        title: 'myXULA — Unified Student Portal',
+        src: 'xula-myxula.png',
+        body: `<p>Xavier University's students were navigating two separate systems — a legacy web portal and a standalone mobile app — that duplicated features and created friction in their daily academic lives.</p><p>The myXULA project unified both into a single, intuitive platform. The redesigned portal brought together the dashboard, activity feed, announcements, events, calendars, and department pages under one cohesive experience, with a streamlined navigation system and improved information architecture.</p><p>The result significantly reduced the cognitive load on students and gave the university a scalable platform to build on for future digital services.</p>`,
+        tags: ['Portal Design', 'Mobile App', 'UX', 'Information Architecture', 'XULA'],
         images: 1
       },
       ls1: {
         category: 'LoneStar College',
         title: 'Books & Bookstore',
+        src: 'Bookstore-LB.webp',
         body: `<p>Lone Star College's bookstore page was a dense wall of text with little visual hierarchy. Students struggled to find key information like textbook ordering, rental check-ins, and hours of operation.</p><p>The redesign introduced a clear services section, visual CTAs, and a modern layout that made the most critical actions immediately accessible — including the virtual bookstore integration with TextbookX.</p>`,
         tags: ['Web Redesign', 'UX', 'Higher Education', 'CMS'],
         images: 1
@@ -1340,6 +1366,7 @@
       ls2: {
         category: 'LoneStar College',
         title: 'Parents & Family',
+        src: 'Parents-LB.webp',
         body: `<p>The original Parents Resources page was a long-scroll text document that felt impersonal and overwhelming for families new to the college system.</p><p>The redesign reframed the page around family concerns — admissions, financial aid, programs — with a welcoming hero, feature cards for key reasons to choose LSC, and a clear visual admissions process flow.</p>`,
         tags: ['Web Redesign', 'UX', 'Higher Education', 'Content Strategy'],
         images: 1
@@ -1347,6 +1374,7 @@
       ls3: {
         category: 'LoneStar College',
         title: 'Marketing Resources',
+        src: 'Marketing-LB.webp',
         body: `<p>The Marketing Resources page was a long, unstructured list of links that made it difficult for staff to locate brand assets quickly. There was no visual differentiation between resource types.</p><p>The redesign introduced clear sections for Styleguides, PowerPoints, and Logos — with thumbnail previews for templates and accordion-style logo categories to reduce scroll fatigue.</p>`,
         tags: ['Web Redesign', 'Information Architecture', 'Higher Education'],
         images: 1
@@ -1354,6 +1382,7 @@
       ls4: {
         category: 'LoneStar College',
         title: 'Career Services',
+        src: 'Career-Services-LB.webp',
         body: `<p>Career Services at LSC-Houston North needed a page that felt as approachable and human as the counsellors themselves. The original page relied on icon-and-text lists that didn't convey the breadth of support available.</p><p>The redesign led with a warm hero, introduced icon-card services blocks, and added a prominent counsellor quote and booking CTA — making it easy for students to take the next step.</p>`,
         tags: ['Web Redesign', 'UX', 'Higher Education', 'Student Services'],
         images: 1
@@ -1369,9 +1398,13 @@
       const tagsEl = document.getElementById('modalTags');
       tagsEl.innerHTML = p.tags.map(t => `<span class="modal-tag">${t}</span>`).join('');
       const imagesEl = document.getElementById('modalImages');
-      imagesEl.innerHTML = Array.from({length: p.images}, (_, i) =>
-        `<div class="modal-img">Add project image ${i + 1}</div>`
-      ).join('');
+      if (p.src) {
+        imagesEl.innerHTML = `<img src="${p.src}" alt="${p.title}" style="width:100%;border-radius:var(--radius);object-fit:cover;" />`;
+      } else {
+        imagesEl.innerHTML = Array.from({length: p.images}, (_, i) =>
+          `<div class="modal-img">Add project image ${i + 1}</div>`
+        ).join('');
+      }
       document.getElementById('modalOverlay').classList.add('open');
       document.body.style.overflow = 'hidden';
     }
