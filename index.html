@@ -242,16 +242,7 @@
     .about-image-placeholder {
       width: 100%;
       aspect-ratio: 4/5;
-      background: linear-gradient(135deg, var(--teal) 0%, var(--teal-light) 100%);
       border-radius: var(--radius-lg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-family: 'Playfair Display', serif;
-      font-size: 72px;
-      font-weight: 900;
-      letter-spacing: -2px;
       position: relative;
       overflow: hidden;
     }
@@ -826,7 +817,7 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-image-wrap reveal">
-          <div class="about-image-placeholder">LB</div>
+          <img src="headshot.jpg" alt="LaToya Bowman" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-lg);" />
           <div class="about-badge">
             <div class="about-badge-num">5+</div>
             <div class="about-badge-label">Years Experience</div>
@@ -835,8 +826,8 @@
         <div class="about-content reveal">
           <p class="section-label">About Me</p>
           <h2 class="section-title">Design that <em>connects</em> people to brands</h2>
-          <p class="about-text">I'm LaToya Bowman — a web designer and developer who bridges the gap between beautiful design and clean, functional code. I specialise in crafting digital experiences that feel intuitive on every screen.</p>
-          <p class="about-text">Running my studio Imbali, I work with founders, creatives, and growing businesses to build websites that not only look great but actually move the needle — from first impression to conversion.</p>
+          <p class="about-text">I'm LaToya Bowman, a web designer and developer with a passion for creating digital experiences that are both beautiful and functional. With a background spanning graphic design, web design, content management, project management, and client services, I bring a unique blend of creativity, technical expertise, and business understanding to every project.</p>
+          <p class="about-text">I specialise in mobile-first design and development, UI/UX principles, website optimisation, and workflow automation. Whether I'm creating a custom website, improving an existing platform, or streamlining processes, my focus is always on delivering solutions that save time, improve engagement, and support long-term growth.</p>
           <a href="#contact" class="btn-primary" style="margin-top:8px;">Work with me</a>
         </div>
       </div>
@@ -895,14 +886,15 @@
         </div>
         <div class="skill-card reveal">
           <div class="skill-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/><path d="M15 5l3 3"/></svg>
           </div>
-          <h3>eCommerce</h3>
-          <p style="font-size:13px;color:var(--text-muted);line-height:1.6;">End-to-end online stores with payment gateways, product flows, and checkout optimisation.</p>
+          <h3>Content Creation</h3>
+          <p style="font-size:13px;color:var(--text-muted);line-height:1.6;">AI-assisted and design-led content — from brand visuals to copy — crafted to engage and convert across every channel.</p>
           <div class="skill-tags">
-            <span class="skill-tag">Shopify</span>
-            <span class="skill-tag">WooCommerce</span>
-            <span class="skill-tag">Stripe</span>
+            <span class="skill-tag">Claude AI</span>
+            <span class="skill-tag">OpenArt</span>
+            <span class="skill-tag">Canva</span>
+            <span class="skill-tag">Adobe CC</span>
           </div>
         </div>
         <div class="skill-card reveal">
@@ -944,7 +936,7 @@
         <div class="filter-tabs reveal" id="filterTabs">
           <button class="filter-tab active" data-filter="all">All</button>
           <button class="filter-tab" data-filter="web-design">Web Design</button>
-          <button class="filter-tab" data-filter="ecommerce">eCommerce</button>
+          <button class="filter-tab" data-filter="xula">XULA</button>
           <button class="filter-tab" data-filter="branding">Branding</button>
           <button class="filter-tab" data-filter="mobile">Mobile</button>
           <button class="filter-tab" data-filter="lonestar">LoneStar</button>
@@ -954,66 +946,58 @@
 
       <div class="projects-grid" id="projectsGrid">
 
-        <div class="project-card" data-category="web-design" onclick="openModal('proj1')">
-          <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#0a4a63,#0d8fb3);">Add project image</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="project-card" data-category="xula" onclick="openModal('xu1')">
+          <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#0a4a63,#0d8fb3);aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);font-size:13px;font-weight:500;">Add project image</div>
           <div class="project-info">
-            <p class="project-category">Web Design</p>
-            <h3>Project Title One</h3>
-            <p>A brief description of the project, its goals, and the outcome delivered for the client.</p>
-            <span class="project-arrow">View Case Study →</span>
+            <p class="project-category">XULA</p>
+            <h3>Project Title</h3>
+            <p>Upload your project image and add a description here.</p>
+            <span class="project-arrow">View Case Study &#x2192;</span>
           </div>
         </div>
 
-        <div class="project-card" data-category="ecommerce" onclick="openModal('proj2')">
-          <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#1a6b3a,#2d9e5a);">Add project image</div>
+        <div class="project-card" data-category="xula" onclick="openModal('xu2')">
+          <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#1a4a63,#1a7a9a);aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);font-size:13px;font-weight:500;">Add project image</div>
           <div class="project-info">
-            <p class="project-category">eCommerce</p>
-            <h3>Project Title Two</h3>
-            <p>A brief description of the project, its goals, and the outcome delivered for the client.</p>
-            <span class="project-arrow">View Case Study →</span>
+            <p class="project-category">XULA</p>
+            <h3>Project Title</h3>
+            <p>Upload your project image and add a description here.</p>
+            <span class="project-arrow">View Case Study &#x2192;</span>
           </div>
         </div>
 
-        <div class="project-card" data-category="branding" onclick="openModal('proj3')">
-          <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#63300a,#b35a0d);">Add project image</div>
+        <div class="project-card" data-category="xula" onclick="openModal('xu3')">
+          <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#0a3a4a,#0a6a80);aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);font-size:13px;font-weight:500;">Add project image</div>
           <div class="project-info">
-            <p class="project-category">Branding</p>
-            <h3>Project Title Three</h3>
-            <p>A brief description of the project, its goals, and the outcome delivered for the client.</p>
-            <span class="project-arrow">View Case Study →</span>
+            <p class="project-category">XULA</p>
+            <h3>Project Title</h3>
+            <p>Upload your project image and add a description here.</p>
+            <span class="project-arrow">View Case Study &#x2192;</span>
           </div>
         </div>
 
-        <div class="project-card" data-category="mobile" onclick="openModal('proj4')">
-          <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#3a0a63,#6b2db3);">Add project image</div>
+        <div class="project-card" data-category="xula" onclick="openModal('xu4')">
+          <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#0a4a50,#0a8a90);aspect-ratio:16/10;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);font-size:13px;font-weight:500;">Add project image</div>
           <div class="project-info">
-            <p class="project-category">Mobile</p>
-            <h3>Project Title Four</h3>
-            <p>A brief description of the project, its goals, and the outcome delivered for the client.</p>
-            <span class="project-arrow">View Case Study →</span>
+            <p class="project-category">XULA</p>
+            <h3>Project Title</h3>
+            <p>Upload your project image and add a description here.</p>
+            <span class="project-arrow">View Case Study &#x2192;</span>
           </div>
         </div>
-
-        <div class="project-card" data-category="web-design" onclick="openModal('proj5')">
-          <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#0a4a63,#1a7a9a);">Add project image</div>
-          <div class="project-info">
-            <p class="project-category">Web Design</p>
-            <h3>Project Title Five</h3>
-            <p>A brief description of the project, its goals, and the outcome delivered for the client.</p>
-            <span class="project-arrow">View Case Study →</span>
-          </div>
-        </div>
-
-        <div class="project-card" data-category="ecommerce" onclick="openModal('proj6')">
-          <div class="project-thumb-placeholder" style="background:linear-gradient(135deg,#1a3a63,#2d5eb3);">Add project image</div>
-          <div class="project-info">
-            <p class="project-category">eCommerce</p>
-            <h3>Project Title Six</h3>
-            <p>A brief description of the project, its goals, and the outcome delivered for the client.</p>
-            <span class="project-arrow">View Case Study →</span>
-          </div>
-        </div>
-
 
         <div class="project-card" data-category="lonestar" onclick="openModal('ls1')">
           <img class="project-thumb" src="Bookstore-LB.webp" alt="Lone Star College Bookstore redesign" />
@@ -1069,34 +1053,34 @@
       <div class="reviews-grid">
         <div class="review-card reveal">
           <div class="review-stars">★★★★★</div>
-          <p class="review-text">"LaToya completely transformed our online presence. The site she built for us is fast, beautiful, and our enquiries have doubled since launch."</p>
+          <p class="review-text">"Her learned knowledge of web development and expertise in mobile development was a huge advantage to our entire community. She put this skillset to work especially in order to help the university move to mobile during the COVID-19 pandemic."</p>
           <div class="review-author">
-            <div class="review-avatar">SG</div>
+            <div class="review-avatar">BB</div>
             <div>
-              <div class="review-name">Shawn Garcia</div>
-              <div class="review-role">Founder & CEO</div>
+              <div class="review-name">Brian Bowers</div>
+              <div class="review-role">Supervisor</div>
             </div>
           </div>
         </div>
         <div class="review-card reveal">
           <div class="review-stars">★★★★★</div>
-          <p class="review-text">"Professional, creative, and a true expert at what she does. She understood our brand immediately and delivered something we couldn't have imagined."</p>
+          <p class="review-text">"An exemplary team asset who provides any manager with an assurance that any assigned task will be carried out to completion — a key role player in implementing several university mobile applications."</p>
           <div class="review-author">
-            <div class="review-avatar">AM</div>
+            <div class="review-avatar">LS</div>
             <div>
-              <div class="review-name">Aisha Martin</div>
-              <div class="review-role">Creative Director</div>
+              <div class="review-name">L'Tanya Settles</div>
+              <div class="review-role">Supervisor</div>
             </div>
           </div>
         </div>
         <div class="review-card reveal">
           <div class="review-stars">★★★★★</div>
-          <p class="review-text">"Working with LaToya was seamless from start to finish. She handled everything — design, development, and content — with incredible attention to detail."</p>
+          <p class="review-text">"LaToya can adapt and learn quickly. She was able to learn the CMS system within her first week. Whether as an individual or as a team she has proven to be extremely resourceful and reliable, meets deadlines with quality execution. She is a great team fit and would be a great asset to any team."</p>
           <div class="review-author">
-            <div class="review-avatar">JT</div>
+            <div class="review-avatar">EB</div>
             <div>
-              <div class="review-name">James Thompson</div>
-              <div class="review-role">Small Business Owner</div>
+              <div class="review-name">Eduardo Balingasa</div>
+              <div class="review-role">Supervisor</div>
             </div>
           </div>
         </div>
@@ -1120,7 +1104,7 @@
               </div>
               <div>
                 <div class="contact-item-label">Email</div>
-                <div class="contact-item-value">hello@latoyabowman.com</div>
+                <div class="contact-item-value">info@latoyabowman.com</div>
               </div>
             </div>
             <div class="contact-item">
@@ -1254,49 +1238,34 @@
 
     // ── CASE STUDY DATA ──
     const projects = {
-      proj1: {
-        category: 'Web Design',
-        title: 'Project Title One',
-        body: `<p>Add your case study content here. Describe the client brief, the challenges you faced, and the design decisions you made.</p><p>Walk through your process — research, wireframes, iterations — and explain how each decision served the project goals.</p><p>Share the outcome: metrics, client feedback, or what changed for the business after launch.</p>`,
-        tags: ['Figma', 'HTML/CSS', 'WordPress', 'Responsive'],
-        images: 3
+      xu1: {
+        category: 'XULA',
+        title: 'Project Title',
+        body: `<p>Add your case study content here. Describe the project brief, the challenges you faced, and the solutions you delivered at Xavier University of Louisiana.</p><p>Walk through your process and share the outcome.</p>`,
+        tags: ['XULA', 'Web Design', 'Mobile'],
+        images: 1
       },
-      proj2: {
-        category: 'eCommerce',
-        title: 'Project Title Two',
-        body: `<p>Add your case study content here. Describe the client brief, the challenges you faced, and the design decisions you made.</p><p>Walk through your process — research, wireframes, iterations — and explain how each decision served the project goals.</p><p>Share the outcome: metrics, client feedback, or what changed for the business after launch.</p>`,
-        tags: ['Shopify', 'WooCommerce', 'Stripe', 'UX'],
-        images: 2
+      xu2: {
+        category: 'XULA',
+        title: 'Project Title',
+        body: `<p>Add your case study content here. Describe the project brief, the challenges you faced, and the solutions you delivered at Xavier University of Louisiana.</p><p>Walk through your process and share the outcome.</p>`,
+        tags: ['XULA', 'Web Design', 'Mobile'],
+        images: 1
       },
-      proj3: {
-        category: 'Branding',
-        title: 'Project Title Three',
-        body: `<p>Add your case study content here. Describe the client brief and the brand strategy behind the work.</p><p>Explain your visual thinking — typography choices, colour psychology, logo mark rationale.</p>`,
-        tags: ['Brand Identity', 'Logo Design', 'Style Guide'],
-        images: 2
+      xu3: {
+        category: 'XULA',
+        title: 'Project Title',
+        body: `<p>Add your case study content here. Describe the project brief, the challenges you faced, and the solutions you delivered at Xavier University of Louisiana.</p><p>Walk through your process and share the outcome.</p>`,
+        tags: ['XULA', 'Web Design', 'Mobile'],
+        images: 1
       },
-      proj4: {
-        category: 'Mobile',
-        title: 'Project Title Four',
-        body: `<p>Add your case study content here. Describe the mobile experience you designed, the user flows, and the platform constraints you worked within.</p>`,
-        tags: ['Mobile UI', 'React Native', 'Prototyping', 'Testing'],
-        images: 3
+      xu4: {
+        category: 'XULA',
+        title: 'Project Title',
+        body: `<p>Add your case study content here. Describe the project brief, the challenges you faced, and the solutions you delivered at Xavier University of Louisiana.</p><p>Walk through your process and share the outcome.</p>`,
+        tags: ['XULA', 'Web Design', 'Mobile'],
+        images: 1
       },
-      proj5: {
-        category: 'Web Design',
-        title: 'Project Title Five',
-        body: `<p>Add your case study content here. Describe the client brief, the challenges you faced, and the design decisions you made.</p>`,
-        tags: ['UI Design', 'Next.js', 'Storyblok', 'SEO'],
-        images: 2
-      },
-      proj6: {
-        category: 'eCommerce',
-        title: 'Project Title Six',
-        body: `<p>Add your case study content here. Describe the client brief, the challenges you faced, and the design decisions you made.</p>`,
-        tags: ['Shopify', 'Conversion Rate', 'UX', 'Analytics'],
-        images: 2
-      }
-,
       ls1: {
         category: 'LoneStar College',
         title: 'Books & Bookstore',
