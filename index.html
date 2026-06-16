@@ -186,9 +186,9 @@
 
     .hero-headline {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(32px, 4vw, 52px);
+      font-size: clamp(38px, 4.5vw, 56px);
       font-weight: 900;
-      line-height: 1.05;
+      line-height: 1.0;
       color: var(--text);
       margin-bottom: 24px;
     }
@@ -303,7 +303,7 @@
 
     .section-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(32px, 4vw, 48px);
+      font-size: clamp(32px, 3.5vw, 44px);
       font-weight: 900;
       line-height: 1.1;
       margin-bottom: 16px;
@@ -872,7 +872,6 @@
       .review-text, .contact-item-value, .contact-item-label,
       .form-group label, .about-text, .modal-body { font-size: 13px !important; line-height: 1.6 !important; }
       .section-label { font-size: 10px !important; }
-      .section-title { font-size: clamp(22px, 3vw, 32px) !important; }
 
       /* HERO — keep two-col but scaled */
       #hero {
@@ -903,7 +902,7 @@
       .hero-right::after {
         background: linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0.95) 25%, rgba(255,255,255,0.4) 42%, rgba(255,255,255,0) 55%) !important;
       }
-      .hero-headline { font-size: clamp(26px, 4vw, 38px) !important; line-height: 1.1 !important; }
+      .hero-headline { font-size: clamp(32px, 4vw, 48px) !important; line-height: 1.0 !important; }
       .hero-sub { font-size: 12px !important; margin-bottom: 14px !important; max-width: 90% !important; word-wrap: break-word !important; }
       .hero-eyebrow { font-size: 10px !important; margin-bottom: 10px !important; }
       .hero-buttons { gap: 8px !important; flex-wrap: wrap !important; }
@@ -912,7 +911,6 @@
       .about-grid { grid-template-columns: 1fr 1fr !important; gap: 24px; }
       .about-image-placeholder { width: 90% !important; }
       .about-text { font-size: 13px !important; line-height: 1.6 !important; }
-      #about .section-title { font-size: 28px !important; }
       #about .section-sub { font-size: 13px !important; }
 
       /* OTHER SECTIONS — collapse */
@@ -931,6 +929,10 @@
       section { padding: 60px 0; }
       #about { padding-top: 40px; }
       section#hero { padding: 0 !important; margin-bottom: 0 !important; }
+      .section-title { font-size: clamp(34px, 9vw, 44px) !important; line-height: 1.05 !important; }
+      .section-label { font-size: 10px !important; }
+      .skills-intro { gap: 12px !important; margin-bottom: 28px !important; }
+      #skills { padding: 48px 0 !important; }
     }
 
     /* ── HAMBURGER ── */
@@ -1013,7 +1015,7 @@
         margin: 0 !important;
       }
       .hero-eyebrow { font-size: 10px !important; margin-bottom: 8px !important; }
-      .hero-headline { font-size: clamp(26px, 7vw, 34px) !important; line-height: 1.1 !important; margin-bottom: 12px !important; }
+      .hero-headline { font-size: clamp(36px, 9vw, 48px) !important; line-height: 1.0 !important; margin-bottom: 14px !important; }
       .hero-sub { font-size: 13px !important; line-height: 1.6 !important; margin-bottom: 20px !important; max-width: 100% !important; }
       .hero-buttons { flex-direction: row !important; flex-wrap: wrap !important; gap: 10px !important; }
 
@@ -1057,7 +1059,7 @@
       .hero-right::after {
         background: linear-gradient(to right, #ffffff 0%, rgba(255,255,255,0.95) 25%, rgba(255,255,255,0.4) 42%, rgba(255,255,255,0) 55%) !important;
       }
-      .hero-headline { font-size: clamp(26px, 4vw, 38px) !important; line-height: 1.1 !important; }
+      .hero-headline { font-size: clamp(32px, 4vw, 48px) !important; line-height: 1.0 !important; }
       .hero-sub { font-size: 12px !important; margin-bottom: 14px !important; max-width: 90% !important; }
       .hero-eyebrow { font-size: 10px !important; margin-bottom: 10px !important; }
       .hero-buttons { gap: 8px !important; flex-wrap: wrap !important; }
@@ -1165,7 +1167,7 @@
     <ul class="nav-links" id="navLinks">
       <li><a href="#about" onclick="closeMenu()">About</a></li>
       <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
-      <li><a href="#projects" onclick="closeMenu()">Work</a></li>
+      <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
       <li><a href="#reviews" onclick="closeMenu()">Reviews</a></li>
       <li><a href="#contact" class="nav-cta" onclick="closeMenu()">Let's Talk</a></li>
     </ul>
@@ -1537,8 +1539,9 @@
         </a>
         <ul class="footer-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#projects">Work</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#reviews">Reviews</a></li>
         </ul>
         <p class="footer-copy">© 2026 LaToya Bowman. All rights reserved.</p>
       </div>
