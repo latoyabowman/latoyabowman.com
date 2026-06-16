@@ -1090,6 +1090,42 @@
         display: inline-flex !important;
       }
     }
+
+    .modal-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      padding: 9px 20px;
+      border-radius: 100px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1.5px solid var(--teal);
+      color: var(--teal);
+      background: transparent;
+      transition: background 0.25s ease, color 0.25s ease;
+      box-sizing: border-box;
+    }
+    .modal-link:hover { background: var(--teal); color: white; }
+    .modal-link svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .modal-inactive {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 20px;
+      padding: 9px 20px;
+      border-radius: 100px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-muted);
+      background: var(--border);
+      border: 1.5px solid var(--border);
+      cursor: default;
+      box-sizing: border-box;
+    }
   </style>
 </head>
 <body>
@@ -1295,7 +1331,7 @@
           <img class="project-thumb" src="Bookstore-LB.webp" alt="Lone Star College Bookstore redesign" />
           <div class="project-info">
             <p class="project-category">LoneStar College</p>
-            <h3>Books &amp; Bookstore</h3>
+            <h3>Virtual Bookstore</h3>
             <p>Redesigned the campus bookstore page to improve navigation, surface key services, and modernise the visual experience for students.</p>
             <span class="project-arrow">View Case Study &#x2192;</span>
           </div>
@@ -1331,12 +1367,12 @@
           </div>
         </div>
 
-        <div class="project-card" data-category="xula" onclick="openModal('xu1')">
-          <img class="project-thumb" src="xula-homecoming.png" alt="XULA Homecoming App" />
+        <div class="project-card" data-category="xula" onclick="openModal('xu3')">
+          <img class="project-thumb" src="xula-myxula.png" alt="myXULA Portal App" />
           <div class="project-info">
-            <p class="project-category">XULA — Mobile</p>
-            <h3>Homecoming App</h3>
-            <p>A guest-facing mobile app for Xavier University's Homecoming 2018, enabling event registration, check-in, schedules, and campus navigation.</p>
+            <p class="project-category">XULA — Portal</p>
+            <h3>myXULA — Unified Portal</h3>
+            <p>Combined a clunky legacy portal and separate mobile app into one streamlined platform, giving students a single hub for academics, events, and campus resources.</p>
             <span class="project-arrow">View Case Study &#x2192;</span>
           </div>
         </div>
@@ -1351,12 +1387,12 @@
           </div>
         </div>
 
-        <div class="project-card" data-category="xula" onclick="openModal('xu3')">
-          <img class="project-thumb" src="xula-myxula.png" alt="myXULA Portal App" />
+        <div class="project-card" data-category="xula" onclick="openModal('xu1')">
+          <img class="project-thumb" src="xula-homecoming.png" alt="XULA Homecoming App" />
           <div class="project-info">
-            <p class="project-category">XULA — Portal</p>
-            <h3>myXULA — Unified Portal</h3>
-            <p>Combined a clunky legacy portal and separate mobile app into one streamlined platform, giving students a single hub for academics, events, and campus resources.</p>
+            <p class="project-category">XULA — Mobile</p>
+            <h3>Homecoming App</h3>
+            <p>A guest-facing mobile app for Xavier University's Homecoming 2018, enabling event registration, check-in, schedules, and campus navigation.</p>
             <span class="project-arrow">View Case Study &#x2192;</span>
           </div>
         </div>
@@ -1563,6 +1599,7 @@
       xu1: {
         category: 'XULA — Mobile',
         title: 'Homecoming App',
+        inactive: true,
         src: 'xula-homecoming.png',
         body: `<p>Xavier University of Louisiana needed a dedicated mobile experience for Homecoming 2018 that would serve both returning alumni and on-campus guests throughout the multi-day event.</p><p>The app provided event registration and check-in, a full homecoming schedule, parade route, campus map, and a live social feed — all under the "eXcellence &amp; yoU" theme. A tile-based navigation system made key actions immediately accessible on first launch.</p><p>The result was a seamless, branded event experience that kept thousands of attendees informed and engaged across the week-long celebration.</p>`,
         tags: ['Mobile App', 'UX Design', 'Event Management', 'XULA'],
@@ -1571,6 +1608,7 @@
       xu2: {
         category: 'XULA — Mobile',
         title: 'XULAgo — Campus Health App',
+        inactive: true,
         src: 'xula-covid.png',
         body: `<p>When the COVID-19 pandemic forced universities to rethink campus access, Xavier University needed a fast, reliable solution to screen students, faculty, and staff before they entered campus.</p><p>XULAgo was developed to deliver a daily health self-assessment and generate a digital health pass directly on the user's phone. The app also surfaced C-19 resources, active case counts, and campus safety information in one place.</p><p>This project was a critical part of XULA's safe return-to-campus strategy and helped the university maintain operations while prioritising community health during an unprecedented crisis.</p>`,
         tags: ['Mobile App', 'COVID-19', 'Campus Safety', 'UX Design', 'XULA'],
@@ -1579,6 +1617,7 @@
       xu3: {
         category: 'XULA — Portal',
         title: 'myXULA — Unified Student Portal',
+        url: 'https://www.xula.edu/itc/myxula-mobile-app.html',
         src: 'xula-myxula.png',
         body: `<p>Xavier University's students were navigating two separate systems — a legacy web portal and a standalone mobile app — that duplicated features and created friction in their daily academic lives.</p><p>The myXULA project unified both into a single, intuitive platform. The redesigned portal brought together the dashboard, activity feed, announcements, events, calendars, and department pages under one cohesive experience, with a streamlined navigation system and improved information architecture.</p><p>The result significantly reduced the cognitive load on students and gave the university a scalable platform to build on for future digital services.</p>`,
         tags: ['Portal Design', 'Mobile App', 'UX', 'Information Architecture', 'XULA'],
@@ -1587,6 +1626,7 @@
       ls1: {
         category: 'LoneStar College',
         title: 'Books & Bookstore',
+        url: 'https://www.lonestar.edu/bookstore.htm',
         src: 'Bookstore-LB.webp',
         body: `<p>Lone Star College's bookstore page was a dense wall of text with little visual hierarchy. Students struggled to find key information like textbook ordering, rental check-ins, and hours of operation.</p><p>The redesign introduced a clear services section, visual CTAs, and a modern layout that made the most critical actions immediately accessible — including the virtual bookstore integration with TextbookX.</p>`,
         tags: ['Web Redesign', 'UX', 'Higher Education', 'CMS'],
@@ -1595,6 +1635,7 @@
       ls2: {
         category: 'LoneStar College',
         title: 'Parents & Family',
+        url: 'https://www.lonestar.edu/parents.htm',
         src: 'Parents-LB.webp',
         body: `<p>The original Parents Resources page was a long-scroll text document that felt impersonal and overwhelming for families new to the college system.</p><p>The redesign reframed the page around family concerns — admissions, financial aid, programs — with a welcoming hero, feature cards for key reasons to choose LSC, and a clear visual admissions process flow.</p>`,
         tags: ['Web Redesign', 'UX', 'Higher Education', 'Content Strategy'],
@@ -1603,6 +1644,7 @@
       ls3: {
         category: 'LoneStar College',
         title: 'Marketing Resources',
+        url: 'https://www.lonestar.edu/college-departments/marketing-communications/marketing-resources.htm',
         src: 'Marketing-LB.webp',
         body: `<p>The Marketing Resources page was a long, unstructured list of links that made it difficult for staff to locate brand assets quickly. There was no visual differentiation between resource types.</p><p>The redesign introduced clear sections for Styleguides, PowerPoints, and Logos — with thumbnail previews for templates and accordion-style logo categories to reduce scroll fatigue.</p>`,
         tags: ['Web Redesign', 'Information Architecture', 'Higher Education'],
@@ -1611,6 +1653,7 @@
       ls4: {
         category: 'LoneStar College',
         title: 'Career Services',
+        url: 'https://www.lonestar.edu/HNCareerServices.htm',
         src: 'Career-Services-LB.webp',
         body: `<p>Career Services at LSC-Houston North needed a page that felt as approachable and human as the counsellors themselves. The original page relied on icon-and-text lists that didn't convey the breadth of support available.</p><p>The redesign led with a warm hero, introduced icon-card services blocks, and added a prominent counsellor quote and booking CTA — making it easy for students to take the next step.</p>`,
         tags: ['Web Redesign', 'UX', 'Higher Education', 'Student Services'],
@@ -1627,13 +1670,22 @@
       const tagsEl = document.getElementById('modalTags');
       tagsEl.innerHTML = p.tags.map(t => `<span class="modal-tag">${t}</span>`).join('');
       const imagesEl = document.getElementById('modalImages');
+      let imgHtml = '';
       if (p.src) {
-        imagesEl.innerHTML = `<img src="${p.src}" alt="${p.title}" style="width:100%;border-radius:var(--radius);object-fit:cover;" />`;
+        imgHtml = `<img src="${p.src}" alt="${p.title}" style="width:100%;border-radius:var(--radius);object-fit:cover;" />`;
       } else {
-        imagesEl.innerHTML = Array.from({length: p.images}, (_, i) =>
+        imgHtml = Array.from({length: p.images}, (_, i) =>
           `<div class="modal-img">Add project image ${i + 1}</div>`
         ).join('');
       }
+      let linkHtml = '';
+      if (p.url) {
+        linkHtml = `<a href="${p.url}" target="_blank" rel="noopener" class="modal-link"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>View Live Site</a>`;
+      } else if (p.inactive) {
+        linkHtml = `<span class="modal-inactive">⚬ Site Inactive — migrated to myXULA</span>`;
+      }
+      const disclaimer = `<p style="font-size:11px;color:var(--text-muted);margin-top:12px;line-height:1.5;font-style:italic;">* Some design features may have been updated or changed since this project was completed.</p>`;
+      imagesEl.innerHTML = imgHtml + linkHtml + (linkHtml ? disclaimer : '');
       document.getElementById('modalOverlay').classList.add('open');
       document.body.style.overflow = 'hidden';
     }
