@@ -1,21 +1,28 @@
     // ── HERO WORD ANIMATION ──
     const headline = document.getElementById('heroHeadline');
     const words = ['Built', 'for', 'every', 'screen.'];
-    words.forEach((word, i) => {
-      const span = document.createElement('span');
-      span.className = 'word';
-      span.textContent = word + (i < words.length - 1 ? '\u00A0' : '');
-      span.style.animationDelay = `${0.3 + i * 0.15}s`;
-      // wrap last word in em
-      if (i === words.length - 1) {
-        const em = document.createElement('em');
-        em.textContent = word;
-        em.style.animationDelay = `${0.3 + i * 0.15}s`;
-        span.textContent = '';
-        span.appendChild(em);
-      }
-      headline.appendChild(span);
-    });
+    if (!headline.children.length) {
+      words.forEach((word, i) => {
+        const span = document.createElement('span');
+        span.className = 'word';
+        span.textContent = word + (i < words.length - 1 ? '\u00A0' : '');
+        span.style.animationDelay = `${0.3 + i * 0.15}s`;
+        if (i === words.length - 1) {
+          const em = document.createElement('em');
+          em.textContent = word;
+          em.style.animationDelay = `${0.3 + i * 0.15}s`;
+          span.textContent = '';
+          span.appendChild(em);
+        }
+        headline.appendChild(span);
+      });
+    } else {
+      headline.querySelectorAll('.word').forEach((span, i) => {
+        span.style.animationDelay = `${0.3 + i * 0.15}s`;
+        const em = span.querySelector('em');
+        if (em) em.style.animationDelay = `${0.3 + i * 0.15}s`;
+      });
+    }
 
     // ── NAV SCROLL ──
     window.addEventListener('scroll', () => {

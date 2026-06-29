@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Latoya Bowman — Web Designer & Developer</title>
-  <link rel="preload" as="image" href="responsive-bg.png" />
+  <link rel="preload" as="image" href="responsive-bg.webp" type="image/webp" fetchpriority="high" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" /></noscript>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -54,7 +55,7 @@
   <section id="hero">
     <div class="hero-left">
       <p class="hero-eyebrow">Web Designer & Developer</p>
-      <h1 class="hero-headline" id="heroHeadline"></h1>
+      <h1 class="hero-headline" id="heroHeadline"><span class="word">Built&nbsp;</span><span class="word">for&nbsp;</span><span class="word">every&nbsp;</span><span class="word"><em>screen.</em></span></h1>
       <p class="hero-sub">I design and build responsive, user-centred websites and digital experiences. Go from brand identity to launch-ready product in days.</p>
       <div class="hero-buttons">
         <a href="#contact" class="btn-primary">Let's Talk</a>
@@ -62,7 +63,10 @@
       </div>
     </div>
     <div class="hero-right">
-      <img src="responsive-bg.png" alt="Multi-device responsive design" />
+      <picture>
+        <source srcset="responsive-bg.webp" type="image/webp" />
+        <img src="responsive-bg.png" alt="Multi-device responsive design" width="1672" height="941" fetchpriority="high" decoding="async" />
+      </picture>
     </div>
   </section>
 

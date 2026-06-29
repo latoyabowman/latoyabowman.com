@@ -631,6 +631,7 @@
       display: block;
       margin: 0;
       padding: 0;
+      background: var(--white);
     }
 
     @media (max-width: 1200px) {
