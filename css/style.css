@@ -631,7 +631,6 @@
       display: block;
       margin: 0;
       padding: 0;
-      background: var(--white);
     }
 
     @media (max-width: 1200px) {
@@ -722,6 +721,18 @@
     .about-image-wrap {
       position: relative;
       padding: 20px;
+      width: fit-content;
+      max-width: 100%;
+      justify-self: start;
+    }
+
+    .about-image-wrap img {
+      display: block;
+      width: min(100%, 360px);
+      aspect-ratio: 4 / 5;
+      height: auto;
+      object-fit: cover;
+      border-radius: var(--radius-lg);
     }
 
     .about-image-placeholder {
@@ -745,8 +756,8 @@
 
     .about-badge {
       position: absolute;
-      bottom: -20px;
-      right: -20px;
+      bottom: 32px;
+      right: 32px;
       background: var(--white);
       border-radius: var(--radius);
       width: 96px;
@@ -778,8 +789,8 @@
         width: 76px;
         height: 76px;
         padding: 8px;
-        bottom: -12px;
-        right: -8px;
+        bottom: 20px;
+        right: 20px;
       }
       .about-badge-num { font-size: 22px; }
       .about-badge-label { font-size: 9px; }
@@ -1085,7 +1096,7 @@
 
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
-    .contact-info { }
+
     .contact-info .section-title { margin-bottom: 16px; }
     .contact-info .section-sub { margin-bottom: 40px; }
 
@@ -1284,7 +1295,7 @@
 
       /* ABOUT — keep two-col but smaller */
       .about-grid { grid-template-columns: 1fr 1fr !important; gap: 24px; }
-      .about-image-placeholder { width: 90% !important; }
+      .about-image-wrap img { width: min(90%, 300px); }
       .about-text { font-size: 13px !important; line-height: 1.6 !important; }
       #about .section-sub { font-size: 13px !important; }
 
@@ -1403,8 +1414,9 @@
 
       /* ABOUT: single column on mobile */
       .about-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
-      .about-image-placeholder { width: 80% !important; margin: 0 auto !important; }
-      .about-badge { bottom: -16px !important; right: 0 !important; }
+      .about-image-wrap { margin: 0 auto; justify-self: center; }
+      .about-image-wrap img { width: min(80%, 320px); margin: 0 auto; }
+      .about-badge { bottom: 20px !important; right: 20px !important; }
     }
 
 
@@ -1516,10 +1528,11 @@
     .cal-frame {
       position: relative;
       width: 100%;
+      min-width: 0;
       padding: 16px;
       box-sizing: border-box;
       border-radius: var(--radius);
-      overflow: hidden;
+      overflow: visible;
     }
 
     .cal-frame-bg {
@@ -1527,12 +1540,17 @@
       inset: 0;
       background: var(--teal);
       z-index: 0;
+      border-radius: var(--radius);
+      pointer-events: none;
     }
 
     .cal-frame #my-cal-inline-45min {
       position: relative;
       z-index: 1;
       width: 100%;
+      min-width: 0;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
     .cal-frame #my-cal-inline-45min > style {
@@ -1541,10 +1559,10 @@
 
     .cal-frame iframe {
       display: block;
-      width: 100% !important;
+      width: 100%;
       border: none;
       border-radius: 8px;
-      overflow: hidden;
+      min-height: 400px;
     }
 
     .cal-error-message {
@@ -1566,11 +1584,12 @@
 
     @media (min-width: 1024px) {
       .cal-frame {
-        min-height: 600px;
+        min-height: 0;
       }
 
       .cal-frame #my-cal-inline-45min {
-        min-width: 600px;
+        min-width: 0;
+        width: 100%;
       }
     }
 
@@ -1901,6 +1920,10 @@
         grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
         gap: 48px;
         align-items: start;
+      }
+
+      .booking-grid > .booking-embeds {
+        min-width: 0;
       }
 
       .booking-embeds {

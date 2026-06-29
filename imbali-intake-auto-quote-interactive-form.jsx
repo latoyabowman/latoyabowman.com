@@ -7,9 +7,9 @@ const CHARCOAL = "#1A1A1A";
 const GRAY = "#8A8378";
 
 const TIERS = {
-  foundation: { name: "Foundation", price: 2250, hours: "20–25 hrs", deposit: 900 },
-  growth: { name: "Growth", price: 3250, hours: "28–35 hrs", deposit: 1300 },
-  authority: { name: "Authority", price: 5500, hours: "35–45 hrs", deposit: 2200 },
+  foundation: { name: "Foundation", price: 1225, hours: "20–25 hrs", deposit: 490 },
+  growth: { name: "Growth", price: 1725, hours: "28–35 hrs", deposit: 690 },
+  authority: { name: "Authority", price: 2600, hours: "35–45 hrs", deposit: 1040 },
 };
 
 const TIER_RANK = { foundation: 0, growth: 1, authority: 2 };
@@ -472,6 +472,14 @@ export default function ImbaliIntakeQuote() {
 
                 <div style={{ marginTop: "20px", display: "flex", gap: "10px" }}>
                   <button
+                    onClick={() => {
+                      const params = new URLSearchParams({
+                        package: quote.tier,
+                        price: quote.total,
+                        deposit: quote.deposit,
+                      });
+                      window.location.href = `/consultation-booking.html?${params.toString()}`;
+                    }}
                     style={{
                       flex: 1,
                       background: TEAL,

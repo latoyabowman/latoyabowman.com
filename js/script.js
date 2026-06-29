@@ -52,7 +52,7 @@
         category: 'XULA — Mobile',
         title: 'Homecoming App',
         inactive: true,
-        src: 'xula-homecoming.png',
+        src: 'images/xula-homecoming.png',
         body: `<p>Xavier University of Louisiana needed a dedicated mobile experience for Homecoming 2018 that would serve both returning alumni and on-campus guests throughout the multi-day event.</p><p>The app provided event registration and check-in, a full homecoming schedule, parade route, campus map, and a live social feed — all under the "eXcellence &amp; yoU" theme. A tile-based navigation system made key actions immediately accessible on first launch.</p><p>The result was a seamless, branded event experience that kept thousands of attendees informed and engaged across the week-long celebration.</p>`,
         tags: ['Mobile App', 'UX Design', 'Event Management', 'XULA'],
         images: 1
@@ -61,7 +61,7 @@
         category: 'XULA — Mobile',
         title: 'XULAgo — Campus Health App',
         inactive: true,
-        src: 'xula-covid.png',
+        src: 'images/xula-covid.png',
         body: `<p>When the COVID-19 pandemic forced universities to rethink campus access, Xavier University needed a fast, reliable solution to screen students, faculty, and staff before they entered campus.</p><p>XULAgo was developed to deliver a daily health self-assessment and generate a digital health pass directly on the user's phone. The app also surfaced C-19 resources, active case counts, and campus safety information in one place.</p><p>This project was a critical part of XULA's safe return-to-campus strategy and helped the university maintain operations while prioritising community health during an unprecedented crisis.</p>`,
         tags: ['Mobile App', 'COVID-19', 'Campus Safety', 'UX Design', 'XULA'],
         images: 1
@@ -70,7 +70,7 @@
         category: 'XULA — Portal',
         title: 'myXULA — Unified Student Portal',
         url: 'https://www.xula.edu/itc/myxula-mobile-app.html',
-        src: 'xula-myxula.png',
+        src: 'images/xula-myxula.png',
         body: `<p>Xavier University's students were navigating two separate systems — a legacy web portal and a standalone mobile app — that duplicated features and created friction in their daily academic lives.</p><p>The myXULA project unified both into a single, intuitive platform. The redesigned portal brought together the dashboard, activity feed, announcements, events, calendars, and department pages under one cohesive experience, with a streamlined navigation system and improved information architecture.</p><p>The result significantly reduced the cognitive load on students and gave the university a scalable platform to build on for future digital services.</p>`,
         tags: ['Portal Design', 'Mobile App', 'UX', 'Information Architecture', 'XULA'],
         images: 1
@@ -79,7 +79,7 @@
         category: 'LoneStar College',
         title: 'Books & Bookstore',
         url: 'https://www.lonestar.edu/bookstore.htm',
-        src: 'Bookstore-LB.webp',
+        src: 'images/Bookstore-LB.webp',
         body: `<p>Lone Star College's bookstore page was a dense wall of text with little visual hierarchy. Students struggled to find key information like textbook ordering, rental check-ins, and hours of operation.</p><p>The redesign introduced a clear services section, visual CTAs, and a modern layout that made the most critical actions immediately accessible — including the virtual bookstore integration with TextbookX.</p>`,
         tags: ['Web Redesign', 'UX', 'Higher Education', 'CMS'],
         images: 1
@@ -88,7 +88,7 @@
         category: 'LoneStar College',
         title: 'Parents & Family',
         url: 'https://www.lonestar.edu/parents.htm',
-        src: 'Parents-LB.webp',
+        src: 'images/Parents-LB.webp',
         body: `<p>The original Parents Resources page was a long-scroll text document that felt impersonal and overwhelming for families new to the college system.</p><p>The redesign reframed the page around family concerns — admissions, financial aid, programs — with a welcoming hero, feature cards for key reasons to choose LSC, and a clear visual admissions process flow.</p>`,
         tags: ['Web Redesign', 'UX', 'Higher Education', 'Content Strategy'],
         images: 1
@@ -97,7 +97,7 @@
         category: 'LoneStar College',
         title: 'Marketing Resources',
         url: 'https://www.lonestar.edu/college-departments/marketing-communications/marketing-resources.htm',
-        src: 'Marketing-LB.webp',
+        src: 'images/Marketing-LB.webp',
         body: `<p>The Marketing Resources page was a long, unstructured list of links that made it difficult for staff to locate brand assets quickly. There was no visual differentiation between resource types.</p><p>The redesign introduced clear sections for Styleguides, PowerPoints, and Logos — with thumbnail previews for templates and accordion-style logo categories to reduce scroll fatigue.</p>`,
         tags: ['Web Redesign', 'Information Architecture', 'Higher Education'],
         images: 1
@@ -106,7 +106,7 @@
         category: 'LoneStar College',
         title: 'Career Services',
         url: 'https://www.lonestar.edu/HNCareerServices.htm',
-        src: 'Career-Services-LB.webp',
+        src: 'images/Career-Services-LB.webp',
         body: `<p>Career Services at LSC-Houston North needed a page that felt as approachable and human as the counsellors themselves. The original page relied on icon-and-text lists that didn't convey the breadth of support available.</p><p>The redesign led with a warm hero, introduced icon-card services blocks, and added a prominent counsellor quote and booking CTA — making it easy for students to take the next step.</p>`,
         tags: ['Web Redesign', 'UX', 'Higher Education', 'Student Services'],
         images: 1
