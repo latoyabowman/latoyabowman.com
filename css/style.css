@@ -725,7 +725,7 @@
     }
 
     .about-image-wrap {
-      padding: 20px;
+      padding: 20px 20px 56px;
       width: fit-content;
       max-width: 100%;
       justify-self: start;
@@ -751,8 +751,9 @@
       position: absolute;
       top: auto;
       left: auto;
-      bottom: 20px;
+      bottom: 0;
       right: 20px;
+      transform: translateY(50%);
       margin: 0;
       background: var(--white);
       border-radius: var(--radius);
@@ -810,8 +811,8 @@
         width: 76px;
         height: 76px;
         padding: 8px;
-        bottom: 16px;
         right: 16px;
+        transform: translateY(50%);
       }
       .about-badge-num { font-size: 22px; }
       .about-badge-label { font-size: 9px; }
@@ -1507,8 +1508,8 @@
       }
 
       .about-image-frame .about-badge {
-        bottom: 16px !important;
         right: 16px !important;
+        transform: translateY(50%) !important;
       }
     }
 
