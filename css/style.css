@@ -17,13 +17,18 @@
       --section-padding-y: 100px;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      max-width: 100%;
+    }
 
     body {
       font-family: 'Inter', sans-serif;
       color: var(--text);
       background: var(--white);
       overflow-x: hidden;
+      max-width: 100%;
     }
 
 
@@ -1307,7 +1312,38 @@
       .reviews-grid { grid-template-columns: 1fr; }
       .modal { grid-template-columns: 1fr; }
       .modal-images { border-radius: 0 0 var(--radius-lg) var(--radius-lg); }
-      .footer-inner { flex-direction: column; gap: 20px; text-align: center; }
+      .footer-inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        text-align: center;
+      }
+
+      .footer-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+      }
+
+      .footer-copy {
+        text-align: center;
+        width: 100%;
+      }
+
+      .packages-card .booking-tier {
+        font-size: 28px !important;
+        line-height: 1.1 !important;
+      }
+
+      .packages-card .booking-price {
+        font-size: 25px !important;
+        line-height: 1.1 !important;
+      }
+
+      .quote-cta-headline {
+        font-size: 28px !important;
+        line-height: 1.1 !important;
+      }
     }
 
     @media (max-width: 600px) {
@@ -1320,6 +1356,20 @@
       .section-label { font-size: 10px !important; }
       .skills-intro { gap: 12px !important; margin-bottom: 28px !important; }
       #skills { padding: 48px 0 !important; }
+
+      .container {
+        padding: 0 20px;
+      }
+
+      nav {
+        padding: 0 20px;
+      }
+
+      .form-group input,
+      .form-group textarea,
+      .form-group select {
+        width: 100%;
+      }
     }
 
     /* ── HAMBURGER ── */
@@ -1375,14 +1425,17 @@
         order: 1 !important;
         z-index: 0 !important;
         flex-shrink: 0 !important;
+        overflow: hidden !important;
       }
       .hero-right img {
-        width: calc(100% + 150px) !important;
+        width: 100% !important;
         height: 100% !important;
         min-height: 100% !important;
         object-fit: cover !important;
         object-position: 48% center !important;
-        margin-left: -150px !important;
+        margin-left: 0 !important;
+        right: auto !important;
+        left: 0 !important;
       }
       .hero-right::after {
         background: linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(255,255,255,0.3) 100%) !important;
