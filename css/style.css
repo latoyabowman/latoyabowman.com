@@ -431,7 +431,7 @@
     }
 
     .packages-card.skill-card.packages-card--featured {
-      border: 3px solid #0a4a64;
+      border: 2px solid #0a4a64;
     }
 
     .packages-card.skill-card:hover {
@@ -500,6 +500,7 @@
 
     .packages-card--featured .packages-card__guidance {
       border-top: none;
+      padding-top: 20px;
     }
 
     .packages-card--featured .packages-card__top .booking-tier {
