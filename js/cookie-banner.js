@@ -85,7 +85,7 @@
     '  <div class="imbali-cookie-banner__inner">',
     '    <p class="imbali-cookie-banner__text">',
     "      This site uses cookies for booking, payment, and basic analytics — nothing sold, nothing shady.",
-    '      <a href="/privacy" class="imbali-cookie-banner__link">Learn more</a>',
+    '      <a href="/privacy#cookies-analytics" class="imbali-cookie-banner__link">Learn more</a>',
     "    </p>",
     '    <div class="imbali-cookie-banner__actions">',
     '      <button type="button" id="imbali-cookie-decline">Decline</button>',
