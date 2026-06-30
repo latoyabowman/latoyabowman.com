@@ -733,27 +733,27 @@
     }
 
     .about-image-frame {
-      display: grid;
-      width: fit-content;
+      position: relative;
+      width: min(100%, 360px);
       max-width: 100%;
     }
 
     .about-image-frame img {
-      grid-area: 1 / 1;
       display: block;
-      width: min(100%, 360px);
+      width: 100%;
       aspect-ratio: 4 / 5;
       height: auto;
       object-fit: cover;
       border-radius: var(--radius-lg);
     }
 
-    .about-badge {
-      grid-area: 1 / 1;
-      align-self: end;
-      justify-self: end;
-      position: relative;
-      margin: 0 16px 16px 0;
+    .about-image-frame .about-badge {
+      position: absolute;
+      top: auto;
+      left: auto;
+      bottom: 20px;
+      right: 20px;
+      margin: 0;
       background: var(--white);
       border-radius: var(--radius);
       width: 96px;
@@ -802,11 +802,16 @@
       margin-top: 4px;
     }
     @media (max-width: 900px) {
-      .about-badge {
+      .about-image-frame {
+        width: min(90%, 300px);
+      }
+
+      .about-image-frame .about-badge {
         width: 76px;
         height: 76px;
         padding: 8px;
-        margin: 0 12px 12px 0;
+        bottom: 16px;
+        right: 16px;
       }
       .about-badge-num { font-size: 22px; }
       .about-badge-label { font-size: 9px; }
@@ -1327,7 +1332,9 @@
 
       /* ABOUT — keep two-col but smaller */
       .about-grid { grid-template-columns: 1fr 1fr !important; gap: 24px; }
-      .about-image-frame img { width: min(90%, 300px); }
+      .about-image-frame {
+        width: min(90%, 300px);
+      }
       .about-text { font-size: 13px !important; line-height: 1.6 !important; }
       #about .section-sub { font-size: 13px !important; }
 
@@ -1495,8 +1502,14 @@
       /* ABOUT: single column on mobile */
       .about-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
       .about-image-wrap { margin: 0 auto; justify-self: center; }
-      .about-image-frame img { width: min(80%, 320px); margin: 0 auto; }
-      .about-badge { margin: 0 12px 12px 0 !important; }
+      .about-image-frame {
+        width: min(80%, 320px);
+      }
+
+      .about-image-frame .about-badge {
+        bottom: 16px !important;
+        right: 16px !important;
+      }
     }
 
 
