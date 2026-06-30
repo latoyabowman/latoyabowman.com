@@ -725,20 +725,48 @@
     }
 
     .about-image-wrap {
-      position: relative;
       padding: 20px;
       width: fit-content;
       max-width: 100%;
       justify-self: start;
+      align-self: start;
     }
 
-    .about-image-wrap img {
+    .about-image-frame {
+      display: grid;
+      width: fit-content;
+      max-width: 100%;
+    }
+
+    .about-image-frame img {
+      grid-area: 1 / 1;
       display: block;
       width: min(100%, 360px);
       aspect-ratio: 4 / 5;
       height: auto;
       object-fit: cover;
       border-radius: var(--radius-lg);
+    }
+
+    .about-badge {
+      grid-area: 1 / 1;
+      align-self: end;
+      justify-self: end;
+      position: relative;
+      margin: 0 16px 16px 0;
+      background: var(--white);
+      border-radius: var(--radius);
+      width: 96px;
+      height: 96px;
+      padding: 12px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 32px rgba(10,74,99,0.15);
+      text-align: center;
+      z-index: 1;
     }
 
     .about-image-placeholder {
@@ -760,23 +788,6 @@
       border-radius: 50%;
     }
 
-    .about-badge {
-      position: absolute;
-      bottom: 32px;
-      right: 32px;
-      background: var(--white);
-      border-radius: var(--radius);
-      width: 96px;
-      height: 96px;
-      padding: 12px;
-      box-sizing: border-box;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 8px 32px rgba(10,74,99,0.15);
-      text-align: center;
-    }
     .about-badge-num {
       font-family: 'Playfair Display', serif;
       font-size: 32px;
@@ -795,8 +806,7 @@
         width: 76px;
         height: 76px;
         padding: 8px;
-        bottom: 20px;
-        right: 20px;
+        margin: 0 12px 12px 0;
       }
       .about-badge-num { font-size: 22px; }
       .about-badge-label { font-size: 9px; }
@@ -1317,7 +1327,7 @@
 
       /* ABOUT — keep two-col but smaller */
       .about-grid { grid-template-columns: 1fr 1fr !important; gap: 24px; }
-      .about-image-wrap img { width: min(90%, 300px); }
+      .about-image-frame img { width: min(90%, 300px); }
       .about-text { font-size: 13px !important; line-height: 1.6 !important; }
       #about .section-sub { font-size: 13px !important; }
 
@@ -1485,8 +1495,8 @@
       /* ABOUT: single column on mobile */
       .about-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
       .about-image-wrap { margin: 0 auto; justify-self: center; }
-      .about-image-wrap img { width: min(80%, 320px); margin: 0 auto; }
-      .about-badge { bottom: 20px !important; right: 20px !important; }
+      .about-image-frame img { width: min(80%, 320px); margin: 0 auto; }
+      .about-badge { margin: 0 12px 12px 0 !important; }
     }
 
 
