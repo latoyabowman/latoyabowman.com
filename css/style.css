@@ -496,7 +496,6 @@
       background: #0a4a64;
       margin: 0;
       padding: 28px 28px 20px;
-      border-radius: 0;
       border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     }
 
@@ -839,6 +838,22 @@
     .skill-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 12px 40px rgba(10,74,99,0.1);
+    }
+
+    .packages-card.skill-card {
+      border-radius: 22px !important;
+    }
+
+    .packages-card__top {
+      border-radius: 20px 20px 0 0;
+    }
+
+    .packages-card--featured .packages-card__top {
+      border-radius: 20px 20px 0 0;
+    }
+
+    .packages-card__body {
+      border-radius: 0 0 20px 20px;
     }
 
     .skill-icon {
